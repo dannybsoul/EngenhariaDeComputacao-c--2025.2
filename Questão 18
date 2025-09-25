@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numero;
+    int soma = 0;
+
+    cout << "digite um numero inteiro: ";
+    cin >> numero;
+
+    // Trabalhar com valor absoluto para evitar problemas com números negativos
+    int n = abs(numero);
+
+    while (n > 0) {
+        soma += n % 10; // pega o último dígito
+        n /= 10;        // remove o último dígito
+    }
+
+    cout << "a soma dos digitos de " << numero << " eh: " << soma << endl;
+
+    return 0;
+}

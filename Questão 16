@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numero;
+    int soma = 0, contador = 0;
+
+    cout << "digite numeros inteiros (digite um numero negativo para encerrar):" << endl;
+
+    while (true) {
+        cout << "numero: ";
+        cin >> numero;
+
+        if (numero < 0) {
+            break; // encerra a leitura
+        }
+
+        soma += numero;
+        contador++;
+    }
+
+    if (contador > 0) {
+        double media = (double)soma / contador;
+        cout << "\nquantidade de numeros digitados: " << contador << endl;
+        cout << "media: " << media << endl;
+    } else {
+        cout << "nenhum numero valido foi digitado." << endl;
+    }
+
+    return 0;
+}

@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+
+    cout << "digite o valor de n: ";
+    cin >> n;
+
+    if (n <= 0) {
+        cout << "digite um numero maior que 0." << endl;
+        return 0;
+    }
+
+    long long a = 0, b = 1, proximo;
+
+    cout << "sequencia de Fibonacci com " << n << " termos:" << endl;
+
+    for (int i = 1; i <= n; i++) {
+        cout << a << " ";
+
+        proximo = a + b;
+        a = b;
+        b = proximo;
+    }
+
+    cout << endl;
+    return 0;
+}

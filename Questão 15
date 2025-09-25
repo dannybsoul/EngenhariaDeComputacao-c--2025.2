@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    unsigned long long fatorial = 1; // suporta valores grandes
+
+    cout << "digite um numero: ";
+    cin >> n;
+
+    if (n < 0) {
+        cout << "nao existe fatorial de numero negativo." << endl;
+    } else {
+        int i = n;
+        while (i > 1) {
+            fatorial *= i;
+            i--;
+        }
+        cout << "o fatorial de " << n << " e: " << fatorial << endl;
+    }
+
+    return 0;
+}
